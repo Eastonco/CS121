@@ -1,0 +1,6 @@
+GPA Mean: 3.19
+Class Standing Mean: 2.60
+Age Mean: 19.92
+Standard Deviation: 0.60
+GPA Min: 2.45
+GPA Max: 3.95
