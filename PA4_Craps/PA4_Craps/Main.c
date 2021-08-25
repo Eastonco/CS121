@@ -23,7 +23,7 @@ int main(void) {
 		system("cls");
 	}
 
-	while (Is_running == true) {
+	while (Is_running) {
 		char play_again = '\0'; //sets variables
 		double bank = 0.0, wager = 0.0, tmp = 0.0;
 		int die1 = 0, die2 = 0, win_loss_point = 0, sum_roll = 0, menu_count = 1, roll_count = 0, starting = 1, point_val = 0,
@@ -63,7 +63,7 @@ int main(void) {
 						char win_loss = '\0';
 						puts("Craps! You win!");
 						bank = adjust_bank_balance(bank, wager, 1);
-						printf("your balance is %lf", bank);
+						printf("your balance is %.2lf\n", bank);
 						printf("Play again? (y/n): ");// play again
 						scanf(" %c", &win_loss);
 						starting = 1;
@@ -73,6 +73,7 @@ int main(void) {
 							return 0;
 						}
 						else {
+							wager = 0;
 							roll_count = 0; //sets roll count
 						}
 					}
@@ -90,6 +91,7 @@ int main(void) {
 							return 0;
 						}
 						else {
+							wager = 0;
 							roll_count = 0;
 						}
 					}

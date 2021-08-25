@@ -53,7 +53,7 @@ bool is_wager_valid(double wager, double balance) {
 //randomly generates a value between 1 and 6 and returns the value
 int roll_die(void) { 
 	int num = 0;
-	num = rand() % 10 + 1;
+	num = rand() % 6 + 1;
 
 	return num;
 }
@@ -68,19 +68,12 @@ int calc_sum_die(int die1_val, int die2_val) {
 
 //tests for rules of craps; returns 1 for craps; returns 0 for "house win"; returns -1 for regular play
 int is_win_loss_or_point(int sum_dice) { 
-	int win_loss_point = 0;
-	if (sum_dice == 7 || sum_dice == 11) {
-		win_loss_point = 1; //Craps, win
-		return win_loss_point;
-	}
-	if (sum_dice == 2 || sum_dice == 3 || sum_dice == 12) {
-		win_loss_point = 0; // House win, loss
-		return win_loss_point;
-	}
-	else {
-		win_loss_point = -1; //continue
-		return win_loss_point;
-	}
+	if (sum_dice == 7 || sum_dice == 11) 
+		return 1;
+	if (sum_dice == 2 || sum_dice == 3 || sum_dice == 12)
+		return 0;
+	else
+		return -1;
 }
 
 //tests if sum_dice = point_value, returns 1; if sum_dice = 7, returns 0, else -1
