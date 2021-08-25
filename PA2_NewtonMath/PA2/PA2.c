@@ -7,9 +7,7 @@
 * Output: The force created through mass * acceleration    *
 ***********************************************************/
 double calc_newtons_2nd_law(double mass, double accl) {
-	double f = 0.0;
-	f = mass * accl; //calculation
-	return f;
+	return mass * accl; 
 }
 
 /***********************************************************
@@ -18,9 +16,7 @@ double calc_newtons_2nd_law(double mass, double accl) {
 * Output: The volume of the cylinder                       *
 ***********************************************************/
 double calc_volume_cylinder(double radius, double height) {
-	double vol = 0.0;
-	vol = M_PI * (pow(radius, 2)) * height;
-	return vol;
+	return M_PI * (pow(radius, 2)) * height;
 }
 
 /***********************************************************
@@ -29,9 +25,7 @@ double calc_volume_cylinder(double radius, double height) {
 * Output: The encoded character                            *
 ***********************************************************/
 char perform_character_encoding(char plaintext_character) {
-	char eccd_chr = '\0';
-	eccd_chr = (plaintext_character - 'a') + 'A';
-	return eccd_chr;
+	return (plaintext_character - 'a') + 'A';
 }
 
 /***********************************************************
@@ -40,9 +34,7 @@ char perform_character_encoding(char plaintext_character) {
 * Output: The force of gravity between the two objects     *
 ***********************************************************/
 double calculate_gravity_force(double mass1, double mass2, double distance) {
-	double f = 0.0;
-	f = (G * mass1 * mass2) / (distance * distance);
-	return f;
+	return (G * mass1 * mass2) / (distance * distance);
 }
 
 /***********************************************************
@@ -51,9 +43,7 @@ double calculate_gravity_force(double mass1, double mass2, double distance) {
 * Output: The voltage out                                  *
 ***********************************************************/
 double calculate_resistive_divider(double resistance1, double resistance2, double vin) {
-	double vout = 0.0;
-	vout = resistance2 / (resistance1 + resistance2) * vin;
-	return vout;
+	return resistance2 / (resistance1 + resistance2) * vin;
 }
 
 /*******************************************************************
@@ -62,9 +52,7 @@ double calculate_resistive_divider(double resistance1, double resistance2, doubl
 * Output: The distance between the two points as a double          *
 *******************************************************************/
 double calculate_distance_between_2pts(double x1, double x2, double y1, double y2) {
-	double distance = 0.0;
-	distance = sqrt(pow((x1 - x2), 2) + pow((y1 - y2), 2));
-	return distance;
+	return sqrt(pow((x1 - x2), 2) + pow((y1 - y2), 2));
 }
 
 /********************************************************************
@@ -73,7 +61,5 @@ double calculate_distance_between_2pts(double x1, double x2, double y1, double y
 * Output: The result of the equation with the said inputs           *
 ********************************************************************/
 double calculate_general_equation(int a, double x, double z) {
-	double result = 0.0;
-	result = ((float)89 / (float)27) - z * x + a / (a % (int)2);
-	return result;
+	return ((float)89 / (float)27) - z * x + a / (a % (int)2);
 }
